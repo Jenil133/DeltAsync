@@ -30,6 +30,7 @@ add_library(deltasync_core STATIC
   src/bytes.cpp
   src/error.cpp
   src/io.cpp
+  src/sha256.cpp
 )
 target_include_directories(deltasync_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_compile_features(deltasync_core PUBLIC cxx_std_17)
