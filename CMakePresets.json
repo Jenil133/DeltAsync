@@ -1,0 +1,144 @@
+{
+  "version": 2,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}"
+    },
+    {
+      "name": "debug",
+      "displayName": "Debug",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "asan",
+      "displayName": "AddressSanitizer + UndefinedBehaviorSanitizer",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS": "-O1",
+        "DELTASYNC_SANITIZE": "address,undefined"
+      }
+    },
+    {
+      "name": "tsan",
+      "displayName": "ThreadSanitizer",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS": "-O1",
+        "DELTASYNC_SANITIZE": "thread"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug",
+      "configurePreset": "debug"
+    },
+    {
+      "name": "release",
+      "configurePreset": "release"
+    },
+    {
+      "name": "asan",
+      "configurePreset": "asan"
+    },
+    {
+      "name": "tsan",
+      "configurePreset": "tsan"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "common",
+      "hidden": true,
+      "output": {
+        "outputOnFailure": true
+      },
+      "environment": {
+        "UBSAN_OPTIONS": "print_stacktrace=1:halt_on_error=1",
+        "ASAN_OPTIONS": "abort_on_error=1:strict_string_checks=1:detect_stack_use_after_return=1",
+        "TSAN_OPTIONS": "halt_on_error=1:second_deadlock_stack=1"
+      }
+    },
+    {
+      "name": "default-suite",
+      "hidden": true,
+      "inherits": "common",
+      "filter": {
+        "exclude": {
+          "label": "stress"
+        }
+      }
+    },
+    {
+      "name": "stress-suite",
+      "hidden": true,
+      "inherits": "common",
+      "filter": {
+        "include": {
+          "label": "stress"
+        }
+      }
+    },
+    {
+      "name": "debug",
+      "inherits": "default-suite",
+      "configurePreset": "debug"
+    },
+    {
+      "name": "release",
+      "inherits": "default-suite",
+      "configurePreset": "release"
+    },
+    {
+      "name": "asan",
+      "inherits": "default-suite",
+      "configurePreset": "asan"
+    },
+    {
+      "name": "tsan",
+      "inherits": "default-suite",
+      "configurePreset": "tsan"
+    },
+    {
+      "name": "debug-stress",
+      "inherits": "stress-suite",
+      "configurePreset": "debug"
+    },
+    {
+      "name": "release-stress",
+      "inherits": "stress-suite",
+      "configurePreset": "release"
+    },
+    {
+      "name": "asan-stress",
+      "inherits": "stress-suite",
+      "configurePreset": "asan"
+    },
+    {
+      "name": "tsan-stress",
+      "inherits": "stress-suite",
+      "configurePreset": "tsan"
+    }
+  ]
+}
