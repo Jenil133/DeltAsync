@@ -29,6 +29,7 @@ target_compile_options(deltasync_warnings INTERFACE -Wall -Wextra -Wpedantic)
 add_library(deltasync_core STATIC
   src/bytes.cpp
   src/block_index.cpp
+  src/delta_format.cpp
   src/error.cpp
   src/file.cpp
   src/io.cpp
