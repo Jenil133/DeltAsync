@@ -23,8 +23,10 @@ add_executable(deltasync_tests
   delta_encoder_test.cpp
   delta_format_test.cpp
   file_test.cpp
+  large_file_test.cpp
   patch_test.cpp
   rolling_checksum_test.cpp
+  roundtrip_test.cpp
   sha256_test.cpp
   signature_test.cpp
 )
@@ -34,3 +36,24 @@ gtest_discover_tests(deltasync_tests
   DISCOVERY_MODE PRE_TEST
   DISCOVERY_TIMEOUT 120
   PROPERTIES LABELS unit TIMEOUT 300)
+
+# Allocation counting replaces the global operator new, which the
+# sanitizers also do, so it only runs in uninstrumented builds.
+if(NOT DELTASYNC_SANITIZE)
+  add_executable(deltasync_alloc_tests alloc_test.cpp)
+  target_link_libraries(deltasync_alloc_tests PRIVATE
+    deltasync_test_support GTest::gtest_main deltasync_warnings)
+  gtest_discover_tests(deltasync_alloc_tests
+    DISCOVERY_MODE PRE_TEST
+    DISCOVERY_TIMEOUT 120
+    PROPERTIES LABELS unit TIMEOUT 300)
+endif()
+
+# Long-running tests; run with `ctest --preset <name>-stress`.
+add_executable(deltasync_stress_tests stress_test.cpp)
+target_link_libraries(deltasync_stress_tests PRIVATE
+  deltasync_test_support GTest::gtest_main deltasync_warnings)
+gtest_discover_tests(deltasync_stress_tests
+  DISCOVERY_MODE PRE_TEST
+  DISCOVERY_TIMEOUT 120
+  PROPERTIES LABELS stress TIMEOUT 3600)
