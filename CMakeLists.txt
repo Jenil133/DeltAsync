@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+option(DELTASYNC_BUILD_TESTS "Build the test suite" ON)
 set(DELTASYNC_SANITIZE "" CACHE STRING
   "Comma-separated sanitizers to build with, e.g. 'address,undefined' or 'thread'")
 
@@ -34,6 +35,7 @@ add_library(deltasync_core STATIC
   src/error.cpp
   src/file.cpp
   src/io.cpp
+  src/patch.cpp
   src/sha256.cpp
   src/signature.cpp
 )
@@ -42,3 +44,8 @@ target_compile_features(deltasync_core PUBLIC cxx_std_17)
 # The sync server runs one thread per connection.
 find_package(Threads REQUIRED)
 target_link_libraries(deltasync_core PUBLIC Threads::Threads PRIVATE deltasync_warnings)
+
+if(DELTASYNC_BUILD_TESTS)
+  enable_testing()
+  add_subdirectory(tests)
+endif()
