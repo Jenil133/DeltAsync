@@ -38,6 +38,7 @@ add_library(deltasync_core STATIC
   src/net.cpp
   src/patch.cpp
   src/protocol.cpp
+  src/resume.cpp
   src/sha256.cpp
   src/signature.cpp
 )
