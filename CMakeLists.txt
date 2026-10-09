@@ -41,6 +41,8 @@ add_library(deltasync_core STATIC
   src/resume.cpp
   src/sha256.cpp
   src/signature.cpp
+  src/sync_client.cpp
+  src/sync_server.cpp
 )
 target_include_directories(deltasync_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_compile_features(deltasync_core PUBLIC cxx_std_17)

@@ -27,11 +27,13 @@ add_executable(deltasync_tests
   net_test.cpp
   patch_test.cpp
   protocol_test.cpp
+  resume_sync_test.cpp
   resume_test.cpp
   rolling_checksum_test.cpp
   roundtrip_test.cpp
   sha256_test.cpp
   signature_test.cpp
+  sync_test.cpp
 )
 target_link_libraries(deltasync_tests PRIVATE
   deltasync_test_support GTest::gtest_main deltasync_warnings)
