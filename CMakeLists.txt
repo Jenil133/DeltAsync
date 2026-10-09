@@ -60,6 +60,12 @@ target_link_libraries(deltasync_cli PUBLIC deltasync_core PRIVATE deltasync_warn
 add_executable(deltasync tools/main.cpp)
 target_link_libraries(deltasync PRIVATE deltasync_cli deltasync_warnings)
 
+# Fault-injection TCP forwarder used by the resume tests and the netem
+# benchmark scripts to interrupt real syncs.
+find_package(Threads REQUIRED)
+add_executable(deltasync_proxy tools/flaky_proxy.cpp)
+target_link_libraries(deltasync_proxy PRIVATE deltasync_core Threads::Threads deltasync_warnings)
+
 if(DELTASYNC_BUILD_TESTS)
   enable_testing()
   add_subdirectory(tests)

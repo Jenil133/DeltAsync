@@ -67,3 +67,15 @@ gtest_discover_tests(deltasync_stress_tests
   DISCOVERY_MODE PRE_TEST
   DISCOVERY_TIMEOUT 120
   PROPERTIES LABELS stress TIMEOUT 3600)
+
+# deltasync_proxy, exercised as a separate process over loopback sockets.
+add_executable(deltasync_proxy_tests proxy_test.cpp)
+target_link_libraries(deltasync_proxy_tests PRIVATE
+  deltasync_test_support GTest::gtest_main deltasync_warnings)
+target_compile_definitions(deltasync_proxy_tests PRIVATE
+  DELTASYNC_PROXY_PATH="$<TARGET_FILE:deltasync_proxy>")
+add_dependencies(deltasync_proxy_tests deltasync_proxy)
+gtest_discover_tests(deltasync_proxy_tests
+  DISCOVERY_MODE PRE_TEST
+  DISCOVERY_TIMEOUT 120
+  PROPERTIES LABELS unit TIMEOUT 120)
