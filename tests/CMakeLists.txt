@@ -79,3 +79,11 @@ gtest_discover_tests(deltasync_proxy_tests
   DISCOVERY_MODE PRE_TEST
   DISCOVERY_TIMEOUT 120
   PROPERTIES LABELS unit TIMEOUT 120)
+
+# The benchmark helper scripts have their own Python self-test.
+find_program(DELTASYNC_PYTHON3 python3)
+if(DELTASYNC_PYTHON3)
+  add_test(NAME scripts.selftest
+    COMMAND ${DELTASYNC_PYTHON3} -B ${PROJECT_SOURCE_DIR}/scripts/test_scripts.py)
+  set_tests_properties(scripts.selftest PROPERTIES LABELS unit TIMEOUT 120)
+endif()
