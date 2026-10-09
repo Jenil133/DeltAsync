@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 640" width="880" height="640" role="img" aria-labelledby="t">
+<title id="t">A 4 KiB overwrite in a 64 MiB file: 2 of 8,192 blocks are resent; signature plus delta is 182,912 bytes against 67,108,864 for a full copy</title>
+<text x="24.00" y="30.00" font-size="16" fill="#e6edf3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="600">You changed 4 KiB of a 64 MiB file. This is what crosses the wire.</text>
+<text x="24.00" y="52.00" font-size="12" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">One cell per 8 KiB block, 8,192 blocks in all. 2 are resent as literal data; the other 8,190 are reused from the receiver's copy.</text>
+<text x="56.00" y="67.00" font-size="12" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">block 0</text>
+<text x="824.00" y="67.00" font-size="12" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">block 8,191</text>
+<defs><pattern id="cells" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="#1a9d8f" rx="0.5"/></pattern></defs>
+<rect x="56" y="74" width="768" height="384" fill="url(#cells)"/>
+<rect x="56.00" y="272.00" width="5.00" height="5.00" fill="#d07d1f"/>
+<rect x="62.00" y="272.00" width="5.00" height="5.00" fill="#d07d1f"/>
+<rect x="52.00" y="268.00" width="19.00" height="13.00" fill="none" rx="3" stroke="#d07d1f" stroke-width="1.5"/>
+<line x1="71.00" y1="268.00" x2="84.00" y2="258.00" stroke="#d07d1f" stroke-width="1"/>
+<rect x="80.00" y="234.00" width="682.60" height="24.00" fill="#21262d" rx="4" stroke="#d07d1f" stroke-width="1"/>
+<text x="88.00" y="250.00" font-size="12" fill="#e6edf3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">blocks 4,224 and 4,225: the 4 KiB overwrite starts 6,000 B into block 4,224, so two blocks are resent</text>
+<text x="48.00" y="277.00" font-size="12" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">33 MiB</text>
+<text x="176.00" y="503.00" font-size="13" fill="#e6edf3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end" font-weight="600">Full copy</text>
+<rect x="190.00" y="486.00" width="634.00" height="24.00" fill="#d07d1f" rx="3"/>
+<text x="814.00" y="503.00" font-size="13" fill="#0d1117" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">67,108,864 B, the whole file</text>
+<text x="176.00" y="543.00" font-size="13" fill="#e6edf3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end" font-weight="600">Deltasync</text>
+<rect x="190.00" y="526.00" width="1.73" height="24.00" fill="#7f8ea3"/>
+<rect x="190.00" y="526.00" width="0.25" height="24.00" fill="#d07d1f"/>
+<text x="203.73" y="543.00" font-size="13" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">182,912 B: signature 163,853 + delta 19,059 (0.27 % of the file)</text>
+<line x1="190.00" y1="550.00" x2="190.00" y2="576.00" stroke="#8b949e" stroke-width="1" stroke-dasharray="3,3"/>
+<line x1="191.73" y1="550.00" x2="364.80" y2="576.00" stroke="#8b949e" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="176.00" y="593.00" font-size="13" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">x 100</text>
+<rect x="190.00" y="576.00" width="154.80" height="24.00" fill="#7f8ea3" rx="3"/>
+<rect x="346.80" y="576.00" width="18.01" height="24.00" fill="#d07d1f" rx="3"/>
+<text x="267.40" y="593.00" font-size="12" fill="#0d1117" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">signature 163,853 B</text>
+<text x="374.80" y="593.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">delta 19,059 B, of which 16,384 B literal</text>
+<rect x="24.00" y="612.00" width="14.00" height="14.00" fill="#1a9d8f" rx="2"/>
+<text x="44.00" y="623.00" font-size="12" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">reused: COPY</text>
+<rect x="146.40" y="612.00" width="14.00" height="14.00" fill="#d07d1f" rx="2"/>
+<text x="166.40" y="623.00" font-size="12" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">sent: LITERAL</text>
+<rect x="275.00" y="612.00" width="14.00" height="14.00" fill="#7f8ea3" rx="2"/>
+<text x="295.00" y="623.00" font-size="12" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">signature and control</text>
+<text x="856.00" y="623.00" font-size="12" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">measured: ctest --preset release -R LargeFileTest</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 598" width="880" height="598" role="img" aria-labelledby="t">
+<title id="t">Bytes sent after an interruption: resumed push against a full retry</title>
+<text x="24.00" y="30.00" font-size="16" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="600">After an interruption: resume, or send it all again?</text>
+<text x="24.00" y="52.00" font-size="12" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Sender-to-receiver bytes, medians over the runs of each scenario. The cut attempt is what the proxy forwarded before closing the connection.</text>
+<text x="24.00" y="96.00" font-size="14" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="600">64 MiB file, whole-file push cut by the proxy, then pushed again</text>
+<text x="146.00" y="153.00" font-size="13" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end" font-weight="600">Cut attempt</text>
+<rect x="160.00" y="136.00" width="279.97" height="24.00" fill="#b45309" rx="3"/>
+<line x1="431.22" y1="130.00" x2="431.22" y2="166.00" stroke="#1f2328" stroke-width="1.5"/>
+<text x="449.97" y="153.00" font-size="12" fill="#1f2328" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">33,554,432 B crossed before the cut</text>
+<text x="425.22" y="126.00" font-size="12" fill="#57606a" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">verified and journaled: 32,505,856 B</text>
+<text x="146.00" y="199.00" font-size="13" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end" font-weight="600">Resumed push</text>
+<rect x="160.00" y="182.00" width="271.22" height="24.00" fill="#0f9688" rx="3"/>
+<rect x="433.22" y="182.00" width="288.75" height="24.00" fill="#b45309" rx="3"/>
+<text x="295.61" y="199.00" font-size="12" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">32,505,856 B kept</text>
+<text x="575.59" y="199.00" font-size="12" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">34,607,169 B sent</text>
+<text x="146.00" y="245.00" font-size="13" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end" font-weight="600">Full retry</text>
+<rect x="160.00" y="228.00" width="560.00" height="24.00" fill="#b45309" rx="3"/>
+<text x="440.00" y="245.00" font-size="12" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">67,116,804 B sent</text>
+<text x="160.00" y="276.00" font-size="12" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Resumed push: 51.6 % of a full retry. Both attempts together: 68,161,601 B, 1.6 % more than one uninterrupted push.</text>
+<text x="160.00" y="294.00" font-size="12" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">64 MiB file, cut after 50 % of it. 48 runs; resume offsets seen: 31,457,280, 32,505,856.</text>
+<text x="24.00" y="332.00" font-size="14" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="600">1 GiB file, no network emulation</text>
+<text x="146.00" y="389.00" font-size="13" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end" font-weight="600">Cut attempt</text>
+<rect x="160.00" y="372.00" width="279.97" height="24.00" fill="#b45309" rx="3"/>
+<line x1="439.42" y1="366.00" x2="439.42" y2="402.00" stroke="#1f2328" stroke-width="1.5"/>
+<text x="449.97" y="389.00" font-size="12" fill="#1f2328" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">536,870,912 B crossed before the cut</text>
+<text x="433.42" y="362.00" font-size="12" fill="#57606a" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">verified and journaled: 535,822,336 B</text>
+<text x="146.00" y="435.00" font-size="13" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end" font-weight="600">Resumed push</text>
+<rect x="160.00" y="418.00" width="279.42" height="24.00" fill="#0f9688" rx="3"/>
+<rect x="441.42" y="418.00" width="280.55" height="24.00" fill="#b45309" rx="3"/>
+<text x="299.71" y="435.00" font-size="12" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">535,822,336 B kept</text>
+<text x="579.69" y="435.00" font-size="12" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">537,982,211 B sent</text>
+<text x="146.00" y="481.00" font-size="13" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="end" font-weight="600">Full retry</text>
+<rect x="160.00" y="464.00" width="560.00" height="24.00" fill="#b45309" rx="3"/>
+<text x="440.00" y="481.00" font-size="12" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">1,073,866,885 B sent</text>
+<text x="160.00" y="512.00" font-size="12" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Resumed push: 50.1 % of a full retry. Both attempts together: 1,074,853,123 B, 0.1 % more than one uninterrupted push.</text>
+<text x="160.00" y="530.00" font-size="12" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">1 GiB file, cut after 50 % of it. 3 runs; resume offsets seen: 534,773,760, 535,822,336.</text>
+<rect x="24.00" y="572.00" width="14.00" height="14.00" fill="#0f9688" rx="2"/>
+<text x="44.00" y="583.00" font-size="12" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">already verified at the receiver, skipped</text>
+<rect x="359.00" y="572.00" width="14.00" height="14.00" fill="#b45309" rx="2"/>
+<text x="379.00" y="583.00" font-size="12" fill="#57606a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">file data sent by the sender</text>
+</svg>

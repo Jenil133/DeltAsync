@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 806 506" width="806" height="506" role="img" aria-labelledby="t">
+<title id="t">Wall time of a whole-file push divided by a delta push, over added delay and packet loss</title>
+<text x="24.00" y="30.00" font-size="16" fill="#e6edf3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="600">Wall time: whole-file push / delta push</text>
+<text x="24.00" y="52.00" font-size="12" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Median of 3 runs per cell; 64 MiB file; tc netem on the loopback (round trip = 2 x delay).</text>
+<text x="24.00" y="70.00" font-size="12" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Bytes on the wire are the same in every cell: 67,116,804 B sent for the whole file; 11,270 B sent + 163,983 B back for the delta.</text>
+<text x="466.00" y="92.00" font-size="12" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">packet loss, each direction (%)</text>
+<text x="229.00" y="110.00" font-size="13" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">0</text>
+<text x="387.00" y="110.00" font-size="13" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">0.5</text>
+<text x="545.00" y="110.00" font-size="13" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">1</text>
+<text x="703.00" y="110.00" font-size="13" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">2</text>
+<text x="136.00" y="160.00" font-size="13" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">0 ms</text>
+<text x="136.00" y="234.00" font-size="13" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">20 ms</text>
+<text x="136.00" y="308.00" font-size="13" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">50 ms</text>
+<text x="136.00" y="382.00" font-size="13" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">100 ms</text>
+<text x="24.00" y="266.00" font-size="12" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">added delay</text>
+<text x="24.00" y="282.00" font-size="12" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">each direction</text>
+<rect x="151.00" y="119.00" width="156.00" height="72.00" fill="#62431f" rx="4"/>
+<text x="229.00" y="152.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">0.7x</text>
+<text x="229.00" y="174.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">1,365 / 1,940 ms</text>
+<rect x="309.00" y="119.00" width="156.00" height="72.00" fill="#4a3824" rx="4"/>
+<text x="387.00" y="152.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">0.8x</text>
+<text x="387.00" y="174.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">1,660 / 1,978 ms</text>
+<rect x="467.00" y="119.00" width="156.00" height="72.00" fill="#5a3f21" rx="4"/>
+<text x="545.00" y="152.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">0.7x</text>
+<text x="545.00" y="174.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">1,420 / 1,901 ms</text>
+<rect x="625.00" y="119.00" width="156.00" height="72.00" fill="#3f3327" rx="4"/>
+<text x="703.00" y="152.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">0.9x</text>
+<text x="703.00" y="174.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">1,917 / 2,104 ms</text>
+<rect x="151.00" y="193.00" width="156.00" height="72.00" fill="#5e4120" rx="4"/>
+<text x="229.00" y="226.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">0.7x</text>
+<text x="229.00" y="248.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">2,088 / 2,891 ms</text>
+<rect x="309.00" y="193.00" width="156.00" height="72.00" fill="#1f3237" rx="4"/>
+<text x="387.00" y="226.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">1.0x</text>
+<text x="387.00" y="248.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">2,359 / 2,337 ms</text>
+<rect x="467.00" y="193.00" width="156.00" height="72.00" fill="#1b4545" rx="4"/>
+<text x="545.00" y="226.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">1.6x</text>
+<text x="545.00" y="248.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">3,325 / 2,082 ms</text>
+<rect x="625.00" y="193.00" width="156.00" height="72.00" fill="#1a4c4b" rx="4"/>
+<text x="703.00" y="226.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">1.9x</text>
+<text x="703.00" y="248.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">4,223 / 2,226 ms</text>
+<rect x="151.00" y="267.00" width="156.00" height="72.00" fill="#1b4848" rx="4"/>
+<text x="229.00" y="300.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">1.7x</text>
+<text x="229.00" y="322.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">4,159 / 2,411 ms</text>
+<rect x="309.00" y="267.00" width="156.00" height="72.00" fill="#195250" rx="4"/>
+<text x="387.00" y="300.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">2.2x</text>
+<text x="387.00" y="322.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">5,629 / 2,557 ms</text>
+<rect x="467.00" y="267.00" width="156.00" height="72.00" fill="#175c57" rx="4"/>
+<text x="545.00" y="300.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">2.8x</text>
+<text x="545.00" y="322.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">6,086 / 2,169 ms</text>
+<rect x="625.00" y="267.00" width="156.00" height="72.00" fill="#12756b" rx="4"/>
+<text x="703.00" y="300.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">5.2x</text>
+<text x="703.00" y="322.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">11,470 / 2,213 ms</text>
+<rect x="151.00" y="341.00" width="156.00" height="72.00" fill="#165d58" rx="4"/>
+<text x="229.00" y="374.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">2.9x</text>
+<text x="229.00" y="396.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">7,232 / 2,490 ms</text>
+<rect x="309.00" y="341.00" width="156.00" height="72.00" fill="#146b63" rx="4"/>
+<text x="387.00" y="374.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">4.1x</text>
+<text x="387.00" y="396.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">11,570 / 2,848 ms</text>
+<rect x="467.00" y="341.00" width="156.00" height="72.00" fill="#165e59" rx="4"/>
+<text x="545.00" y="374.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">2.9x</text>
+<text x="545.00" y="396.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">10,153 / 3,443 ms</text>
+<rect x="625.00" y="341.00" width="156.00" height="72.00" fill="#15655f" rx="4"/>
+<text x="703.00" y="374.00" font-size="20" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle" font-weight="600">3.5x</text>
+<text x="703.00" y="396.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">12,359 / 3,492 ms</text>
+<text x="24.00" y="452.00" font-size="12" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">cell: ratio, then whole-file / delta median wall time</text>
+<rect x="482.00" y="440.00" width="16.00" height="16.00" fill="#573e22"/>
+<rect x="498.00" y="440.00" width="16.00" height="16.00" fill="#403426"/>
+<rect x="514.00" y="440.00" width="16.00" height="16.00" fill="#1e3438"/>
+<rect x="530.00" y="440.00" width="16.00" height="16.00" fill="#1d3b3e"/>
+<rect x="546.00" y="440.00" width="16.00" height="16.00" fill="#1c4243"/>
+<rect x="562.00" y="440.00" width="16.00" height="16.00" fill="#1a4948"/>
+<rect x="578.00" y="440.00" width="16.00" height="16.00" fill="#19504e"/>
+<rect x="594.00" y="440.00" width="16.00" height="16.00" fill="#185653"/>
+<rect x="610.00" y="440.00" width="16.00" height="16.00" fill="#175d58"/>
+<rect x="626.00" y="440.00" width="16.00" height="16.00" fill="#15645e"/>
+<rect x="642.00" y="440.00" width="16.00" height="16.00" fill="#146b63"/>
+<rect x="658.00" y="440.00" width="16.00" height="16.00" fill="#137268"/>
+<text x="474.00" y="452.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="end">0.7x</text>
+<text x="682.00" y="452.00" font-size="12" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">5.2x</text>
+<text x="578.00" y="476.00" font-size="12" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">amber: the delta push was slower; teal: faster</text>
+</svg>
