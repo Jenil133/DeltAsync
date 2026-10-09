@@ -24,7 +24,9 @@ add_executable(deltasync_tests
   delta_format_test.cpp
   file_test.cpp
   large_file_test.cpp
+  net_test.cpp
   patch_test.cpp
+  protocol_test.cpp
   rolling_checksum_test.cpp
   roundtrip_test.cpp
   sha256_test.cpp
