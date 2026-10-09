@@ -20,6 +20,7 @@ target_link_libraries(deltasync_test_support
 # Default suite: fast unit and integration tests.
 add_executable(deltasync_tests
   bytes_test.cpp
+  cli_test.cpp
   delta_encoder_test.cpp
   delta_format_test.cpp
   file_test.cpp
@@ -36,7 +37,11 @@ add_executable(deltasync_tests
   sync_test.cpp
 )
 target_link_libraries(deltasync_tests PRIVATE
-  deltasync_test_support GTest::gtest_main deltasync_warnings)
+  deltasync_test_support deltasync_cli GTest::gtest_main deltasync_warnings)
+# The CLI tests run the real executable.
+target_compile_definitions(deltasync_tests PRIVATE
+  DELTASYNC_CLI_PATH="$<TARGET_FILE:deltasync>")
+add_dependencies(deltasync_tests deltasync)
 gtest_discover_tests(deltasync_tests
   DISCOVERY_MODE PRE_TEST
   DISCOVERY_TIMEOUT 120

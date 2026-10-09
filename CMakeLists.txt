@@ -50,6 +50,16 @@ target_compile_features(deltasync_core PUBLIC cxx_std_17)
 find_package(Threads REQUIRED)
 target_link_libraries(deltasync_core PUBLIC Threads::Threads PRIVATE deltasync_warnings)
 
+# The command-line front end is a library of its own so tests can exercise
+# its helpers directly as well as through the executable.
+add_library(deltasync_cli STATIC tools/cli.cpp)
+target_include_directories(deltasync_cli PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/tools)
+target_compile_definitions(deltasync_cli PRIVATE DELTASYNC_VERSION="${PROJECT_VERSION}")
+target_link_libraries(deltasync_cli PUBLIC deltasync_core PRIVATE deltasync_warnings)
+
+add_executable(deltasync tools/main.cpp)
+target_link_libraries(deltasync PRIVATE deltasync_cli deltasync_warnings)
+
 if(DELTASYNC_BUILD_TESTS)
   enable_testing()
   add_subdirectory(tests)
